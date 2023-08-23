@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+@mixin flex($direction, $wrap, $js-content, $al-content, $al-items) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $js-content;
+  align-content: $al-content;
+  align-items: $al-items;
+}
+
+/* colores */
+$color-bitcoin: #f7931a;
+$color-soft: #ffe8d5;
+$color-blue-soft: #e7f5ff;
+$color-warn: #201e1c;
+$black: #282523;
+$grey: #bababa;
+$off-white: #faf8f7;
+$just-white: #fff;
+
+/* tamaño de fuentes */
+
+$large: 2.8rem;
+$small: 1.6rem;
+
+.cabezera {
+  position: relative;
+  display: grid;
+  place-content: center;
+  top: 0;
+  height: 50vh;
+  min-width: 340px;
+
+  background-image: linear-gradient(
+    to left bottom,
+    #282523,
+    #5a3e27,
+    #8c5828,
+    #c17525,
+    #f7931a
+  );
+
+  .cabezera__titulo-headear {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-block-start: 2rem;
+    padding-block-end: 2.8rem;
+
+    img {
+      width: 20rem;
+    }
+  }
+
+  h1 {
+    margin: 0 24px;
+    font-size: $large;
+    color: $just-white;
+  }
+
+  p {
+    padding: 1.2rem 2.8rem;
+    font-size: $small;
+    color: $grey;
+  }
+
+  // @include flex(row, no-wrap, center, center, center);
+
+  .cabezera--planes {
+    justify-self: center;
+    position: absolute;
+    bottom: -2%;
+
+    border: none;
+    border-radius: 8px;
+    padding: 1.2rem 2rem;
+    width: 30rem;
+
+    font-size: small;
+    font-weight: bold;
+
+    color: $black;
+    background-color: $color-soft;
+  }
+}
