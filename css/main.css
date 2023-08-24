@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+/* colores */
+/* tamaño de fuentes */
 html {
   font-size: 62.5%;
 }
@@ -12,17 +14,17 @@ html {
 body {
   text-align: center;
   font-family: "DM Sans", sans-serif;
+  background-color: #faf8f7;
+  scroll-behavior: smooth;
 }
 
-/* colores */
-/* tamaño de fuentes */
 .cabezera {
   position: relative;
   display: grid;
   place-content: center;
   top: 0;
   height: 50vh;
-  min-width: 340px;
+  min-width: 280px;
   background-image: linear-gradient(to left bottom, #282523, #5a3e27, #8c5828, #c17525, #f7931a);
 }
 .cabezera .cabezera__titulo-headear {
@@ -30,32 +32,159 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-block-start: 2rem;
   padding-block-end: 2.8rem;
 }
 .cabezera .cabezera__titulo-headear img {
   width: 20rem;
 }
 .cabezera h1 {
-  margin: 0 24px;
+  margin: 0 4%;
   font-size: 2.8rem;
   color: #fff;
 }
 .cabezera p {
   padding: 1.2rem 2.8rem;
   font-size: 1.6rem;
-  color: #bababa;
+  color: #ffe8d5;
 }
 .cabezera .cabezera--planes {
   justify-self: center;
   position: absolute;
-  bottom: -2%;
+  bottom: -2rem;
   border: none;
   border-radius: 8px;
   padding: 1.2rem 2rem;
-  width: 30rem;
+  width: min(100%, 30rem);
   font-size: small;
   font-weight: bold;
   color: #282523;
   background-color: #ffe8d5;
+  box-shadow: -1px 4px 10px -5px;
+}
+
+.main-exchange-contanedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-block-start: 80px;
+  margin-block-end: 30px;
+  margin-inline: auto;
+  width: 90%;
+  min-width: 280px;
+  max-width: 900px;
+}
+.main-exchange-contanedor figure {
+  width: -moz-max-content;
+  width: max-content;
+  margin-block-end: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-exchange-contanedor figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-width: 900px;
+  min-width: 280px;
+}
+.main-exchange-contanedor .main-exchange-containedor--titulo h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-block-end: 12px;
+}
+.main-exchange-contanedor .main-exchange-containedor--titulo p {
+  font-size: 1.6rem;
+  color: #757575;
+  margin-block-end: 8px;
+}
+
+.main-tabla-containedor {
+  display: flex;
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 60%;
+  min-width: 260px;
+  max-width: 460px;
+  font-family: "inter", sans-serif;
+}
+.main-tabla-containedor .tabla, .main-tabla-containedor .tabla-comisiones {
+  animation: 1.2s ease-in;
+}
+.main-tabla-containedor .tabla h3, .main-tabla-containedor .tabla-comisiones h3 {
+  text-align: left;
+  margin-block-end: 8px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #f7931a;
+}
+.main-tabla-containedor .tabla .main-tabla, .main-tabla-containedor .tabla-comisiones .main-tabla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: flex-start;
+  width: 100%;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.main-tabla-containedor .tabla .main-tabla li, .main-tabla-containedor .tabla-comisiones .main-tabla li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: 4px 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  color: #757575;
+  list-style: none;
+}
+.main-tabla-containedor .tabla .main-tabla li:nth-child(even), .main-tabla-containedor .tabla-comisiones .main-tabla li:nth-child(even) {
+  font-weight: 700;
+}
+.main-tabla-containedor .tabla .main-tabla li .caida, .main-tabla-containedor .tabla-comisiones .main-tabla li .caida {
+  display: inline-block;
+  background-image: url("./assets/icons/trending-down.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-tabla-containedor .tabla .main-tabla li .subida, .main-tabla-containedor .tabla-comisiones .main-tabla li .subida {
+  display: inline-block;
+  background-image: url("assets/icons/trending-up.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-tabla-containedor .tabla .actualizado, .main-tabla-containedor .tabla-comisiones .actualizado {
+  margin: 12px auto;
+  padding: 16px;
+  width: min(100%, 26rem);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  background-color: #ffe8d5;
+}
+.main-tabla-containedor .tabla-comisiones {
+  transition: 1.2s ease-in;
+}
+.main-tabla-containedor .tabla-comisiones h3 {
+  color: #53a8f8;
+}
+.main-tabla-containedor .tabla-comisiones .actualizado {
+  background-color: #e7f5ff;
+}
+.main-tabla-containedor #flecha-derecha {
+  position: absolute;
+  right: 2.8rem;
+  bottom: -30.8rem;
+  cursor: pointer;
+}
+.main-tabla-containedor #flecha-derecha img {
+  width: 12px;
 }/*# sourceMappingURL=main.css.map */

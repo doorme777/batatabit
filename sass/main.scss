@@ -4,24 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
-}
-
-@mixin flex($direction, $wrap, $js-content, $al-content, $al-items) {
-  display: flex;
-  flex-direction: $direction;
-  flex-wrap: $wrap;
-  justify-content: $js-content;
-  align-content: $al-content;
-  align-items: $al-items;
-}
-
 /* colores */
 $color-bitcoin: #f7931a;
 $color-soft: #ffe8d5;
@@ -35,7 +17,28 @@ $just-white: #fff;
 /* tamaño de fuentes */
 
 $large: 2.8rem;
+$medium: 2.4rem;
 $small: 1.6rem;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: $off-white;
+  scroll-behavior: smooth;
+}
+
+@mixin flex($direction, $wrap, $js-content, $al-content, $al-items) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $js-content;
+  align-content: $al-content;
+  align-items: $al-items;
+}
 
 .cabezera {
   position: relative;
@@ -43,7 +46,7 @@ $small: 1.6rem;
   place-content: center;
   top: 0;
   height: 50vh;
-  min-width: 340px;
+  min-width: 280px;
 
   background-image: linear-gradient(
     to left bottom,
@@ -59,7 +62,6 @@ $small: 1.6rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-block-start: 2rem;
     padding-block-end: 2.8rem;
 
     img {
@@ -68,7 +70,7 @@ $small: 1.6rem;
   }
 
   h1 {
-    margin: 0 24px;
+    margin: 0 4%;
     font-size: $large;
     color: $just-white;
   }
@@ -76,25 +78,158 @@ $small: 1.6rem;
   p {
     padding: 1.2rem 2.8rem;
     font-size: $small;
-    color: $grey;
+    color: $color-soft;
   }
-
-  // @include flex(row, no-wrap, center, center, center);
 
   .cabezera--planes {
     justify-self: center;
     position: absolute;
-    bottom: -2%;
+    bottom: -2rem;
 
     border: none;
     border-radius: 8px;
     padding: 1.2rem 2rem;
-    width: 30rem;
+    width: min(100%, 30rem);
 
     font-size: small;
     font-weight: bold;
 
     color: $black;
     background-color: $color-soft;
+    box-shadow: -1px 4px 10px -5px;
+  }
+}
+
+.main-exchange-contanedor {
+  @include flex(column, nowrap, center, center, center);
+  margin-block-start: 80px;
+  margin-block-end: 30px;
+  margin-inline: auto;
+  width: 90%;
+  min-width: 280px;
+  max-width: 900px;
+
+  figure {
+    width: max-content;
+    margin-block-end: 12px;
+    object-fit: cover;
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-width: 900px;
+      min-width: 280px;
+    }
+  }
+
+  .main-exchange-containedor--titulo {
+    h2 {
+      font-size: $medium;
+      font-weight: bold;
+      margin-block-end: 12px;
+    }
+
+    p {
+      font-size: $small;
+      color: #757575;
+      margin-block-end: 8px;
+    }
+  }
+}
+
+.main-tabla-containedor {
+  display: flex;
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 60%;
+  min-width: 260px;
+  max-width: 460px;
+  font-family: "inter", sans-serif;
+
+  .tabla {
+    animation: 1.2s ease-in;
+    h3 {
+      text-align: left;
+      margin-block-end: 8px;
+
+      font-size: $medium;
+      font-weight: bold;
+      color: $color-bitcoin;
+    }
+
+    .main-tabla {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: flex-start;
+      width: 100%;
+      min-width: 260px;
+      max-width: 380px;
+      padding: 12px;
+      border-radius: 12px;
+      background-color: $just-white;
+
+      li {
+        @include flex(row, wrap, space-between, center, center);
+        margin: 4px 0;
+        width: 100%;
+        height: 100%;
+        font-size: $small;
+        // font-weight: 700;
+        color: #757575;
+        list-style: none;
+
+        &:nth-child(even) {
+          font-weight: 700;
+        }
+
+        .caida {
+          display: inline-block;
+          background-image: url("./assets/icons/trending-down.svg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .subida {
+          display: inline-block;
+          background-image: url("assets/icons/trending-up.svg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .actualizado {
+      margin: 12px auto;
+      padding: 16px;
+      width: min(100%, 26rem);
+      border-radius: 12px;
+      font-size: 1.2rem;
+      background-color: $color-soft;
+    }
+  }
+
+  .tabla-comisiones {
+    @extend .tabla;
+    transition: 1.2s ease-in;
+
+    h3 {
+      color: #53a8f8;
+    }
+
+    .actualizado {
+      background-color: $color-blue-soft;
+    }
+  }
+
+  #flecha-derecha {
+    position: absolute;
+    right: 2.8rem;
+    bottom: -30.8rem;
+    cursor: pointer;
+
+    img {
+      width: 12px;
+    }
   }
 }
