@@ -146,7 +146,16 @@ body {
   font-family: "inter", sans-serif;
 
   .tabla {
-    animation: 1.2s ease-in;
+    @keyframes irse {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
     h3 {
       text-align: left;
       margin-block-end: 8px;
@@ -211,7 +220,17 @@ body {
 
   .tabla-comisiones {
     @extend .tabla;
-    transition: 1.2s ease-in;
+
+    @keyframes aparecer {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
     h3 {
       color: #53a8f8;
@@ -226,7 +245,9 @@ body {
     position: absolute;
     right: 2.8rem;
     bottom: -30.8rem;
+    width: max-content;
     cursor: pointer;
+    transition: 0.3s ease;
 
     img {
       width: 12px;

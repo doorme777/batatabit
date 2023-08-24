@@ -110,8 +110,15 @@ body {
   max-width: 460px;
   font-family: "inter", sans-serif;
 }
-.main-tabla-containedor .tabla, .main-tabla-containedor .tabla-comisiones {
-  animation: 1.2s ease-in;
+@keyframes irse {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .main-tabla-containedor .tabla h3, .main-tabla-containedor .tabla-comisiones h3 {
   text-align: left;
@@ -170,8 +177,15 @@ body {
   font-size: 1.2rem;
   background-color: #ffe8d5;
 }
-.main-tabla-containedor .tabla-comisiones {
-  transition: 1.2s ease-in;
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .main-tabla-containedor .tabla-comisiones h3 {
   color: #53a8f8;
@@ -183,7 +197,10 @@ body {
   position: absolute;
   right: 2.8rem;
   bottom: -30.8rem;
+  width: -moz-max-content;
+  width: max-content;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .main-tabla-containedor #flecha-derecha img {
   width: 12px;
