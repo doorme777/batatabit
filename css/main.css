@@ -229,17 +229,28 @@ p {
   color: #fff;
 }
 .main-datails-product .product-cards--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  gap: 28px;
+  width: 100%;
   margin: 0 4%;
-  padding-block-end: 12px;
+  padding-block-end: min(40px, 8vh);
 }
 .main-datails-product .product-cards--container .main-datails--card {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   align-items: flex-start;
   width: 100%;
+  min-width: 280px;
+  max-width: 350px;
+  height: 25vh;
+  min-height: 190px;
   padding: 8px;
   border-radius: 12px;
   text-align: left;
@@ -252,4 +263,7 @@ p {
   font-size: 2.4rem;
   font-weight: 500;
   color: #fff;
+}
+.main-datails-product .product-cards--container .main-datails--card .product--card-body {
+  line-height: 1.8rem;
 }/*# sourceMappingURL=main.css.map */
