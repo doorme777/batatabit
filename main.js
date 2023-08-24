@@ -24,7 +24,7 @@ function moveRight() {
   move.style.transform = "rotate(180deg)";
 
   comiciones.style.order = 1;
-  comiciones.style.animation = "aparecer 0.3s ease-in-out";
+  comiciones.style.animation = "aparecer 0.3s ease-out";
 
   monedas.style.order = 2;
 }
@@ -37,5 +37,5 @@ function moveLeft() {
   comiciones.style.order = 2;
   monedas.style.order = 1;
 
-  monedas.style.animation = "irse 0.3s ease-in-out";
+  monedas.style.animation = "irse 0.3s ease-out";
 }

@@ -18,6 +18,12 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  font-size: 1.6rem;
+  color: #757575;
+  margin-block-end: 8px;
+}
+
 .cabezera {
   position: relative;
   display: grid;
@@ -94,11 +100,6 @@ body {
   font-size: 2.4rem;
   font-weight: bold;
   margin-block-end: 12px;
-}
-.main-exchange-contanedor .main-exchange-containedor--titulo p {
-  font-size: 1.6rem;
-  color: #757575;
-  margin-block-end: 8px;
 }
 
 .main-tabla-containedor {
@@ -204,4 +205,51 @@ body {
 }
 .main-tabla-containedor #flecha-derecha img {
   width: 12px;
+}
+
+.main-datails-product {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-block: 20px;
+  width: 100vw;
+  background-color: #201e1c;
+}
+.main-datails-product .batatacoin {
+  position: relative;
+  top: -2rem;
+  width: 6rem;
+}
+.main-datails-product .main-datails--titulo h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+.main-datails-product .product-cards--container {
+  margin: 0 4%;
+  padding-block-end: 12px;
+}
+.main-datails-product .product-cards--container .main-datails--card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  text-align: left;
+  background-color: #282523;
+}
+.main-datails-product .product-cards--container .main-datails--card img {
+  margin-block-end: 8px;
+}
+.main-datails-product .product-cards--container .main-datails--card .product--card-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

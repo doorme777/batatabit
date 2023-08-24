@@ -40,6 +40,12 @@ body {
   align-items: $al-items;
 }
 
+p {
+  font-size: $small;
+  color: #757575;
+  margin-block-end: 8px;
+}
+
 .cabezera {
   position: relative;
   display: grid;
@@ -126,12 +132,6 @@ body {
       font-size: $medium;
       font-weight: bold;
       margin-block-end: 12px;
-    }
-
-    p {
-      font-size: $small;
-      color: #757575;
-      margin-block-end: 8px;
     }
   }
 }
@@ -251,6 +251,51 @@ body {
 
     img {
       width: 12px;
+    }
+  }
+}
+
+.main-datails-product {
+  @include flex(column, nowrap, center, center, center);
+  margin-block: 20px;
+  width: 100vw;
+  background-color: $color-warn;
+
+  .batatacoin {
+    position: relative;
+    top: -2rem;
+    width: 6rem;
+  }
+
+  .main-datails--titulo {
+    h2 {
+      font-size: $medium;
+      font-weight: 700;
+      color: $just-white;
+    }
+  }
+
+  .product-cards--container {
+    margin: 0 4%;
+    padding-block-end: 12px;
+
+    .main-datails--card {
+      @include flex(column, nowrap, center, center, flex-start);
+      width: 100%;
+      padding: 8px;
+      border-radius: 12px;
+      text-align: left;
+      background-color: $black;
+
+      img {
+        margin-block-end: 8px;
+      }
+
+      .product--card-title {
+        font-size: $medium;
+        font-weight: 500;
+        color: $just-white;
+      }
     }
   }
 }
