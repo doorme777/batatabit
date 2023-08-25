@@ -143,20 +143,14 @@ p {
   margin: 0 auto;
   width: 60%;
   min-width: 260px;
-  max-width: 460px;
+  max-width: 900px;
   font-family: "inter", sans-serif;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 
   .tabla {
-    @keyframes irse {
-      0% {
-        opacity: 0;
-        transform: translateX(-100%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
+    scroll-snap-align: center;
+
     h3 {
       text-align: left;
       margin-block-end: 8px;
@@ -242,23 +236,19 @@ p {
     }
   }
 
-  #flecha-derecha {
-    position: absolute;
-    right: 2.8rem;
-    bottom: -30.8rem;
-    width: max-content;
-    cursor: pointer;
-    transition: 0.3s ease;
+  &::-webkit-scrollbar {
+    height: 5px;
+    background-color: $grey;
+  }
 
-    img {
-      width: 12px;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-bitcoin;
   }
 }
 
 .main-datails-product {
   @include flex(column, nowrap, center, center, center);
-  margin-block-start: 12px;
+  margin-block-start: 28px;
   width: 100vw;
   background-color: $color-warn;
 

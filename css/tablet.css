@@ -1,4 +1,6 @@
 .main-tabla-containedor {
+  justify-content: center;
+  gap: 28px;
   width: 0;
   overflow-x: inherit;
 }
