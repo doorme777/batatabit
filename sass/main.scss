@@ -22,13 +22,13 @@ $small: 1.6rem;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   text-align: center;
   font-family: "DM Sans", sans-serif;
   background-color: $off-white;
-  scroll-behavior: smooth;
 }
 
 @mixin flex($direction, $wrap, $js-content, $al-content, $al-items) {
@@ -97,6 +97,7 @@ p {
     padding: 1.2rem 2rem;
     width: min(100%, 30rem);
 
+    text-decoration: none;
     font-size: small;
     font-weight: bold;
 
@@ -257,7 +258,7 @@ p {
 
 .main-datails-product {
   @include flex(column, nowrap, center, center, center);
-  margin-block: 20px;
+  margin-block-start: 12px;
   width: 100vw;
   background-color: $color-warn;
 
@@ -284,7 +285,7 @@ p {
     gap: 28px;
     width: 100%;
     margin: 0 4%;
-    padding-block-end: min(40px, 8vh);
+    padding-block-end: 4vh;
 
     .main-datails--card {
       @include flex(column, nowrap, flex-start, center, flex-start);
@@ -311,6 +312,136 @@ p {
 
       .product--card-body {
         line-height: 1.8rem;
+      }
+    }
+  }
+}
+
+.image-women-bitcoin {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 50vh;
+  width: 100vw;
+
+  h2 {
+    position: absolute;
+    font-weight: bold;
+    font-size: $large;
+    color: $just-white;
+  }
+
+  .image-women-bitcoin {
+    @include flex(row, wrap, center, center, center);
+    overflow: hidden;
+    width: 100%;
+
+    .image-women {
+      width: min(280px, 100%);
+      object-fit: cover;
+    }
+  }
+}
+
+.main-plans-container {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  overflow-x: hidden;
+  h2 {
+    margin-block: 16px;
+    margin-inline: 4%;
+    font-size: $large;
+  }
+  p {
+    margin-inline: 4%;
+  }
+
+  .plans-container--slider {
+    @include flex(row, nowrap, space-between, center, center);
+    width: 72%;
+    min-width: 280px;
+    max-width: 450px;
+    height: 100%;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    .plans-container--card {
+      @include flex(column, nowrap, center, center, center);
+      width: 100%;
+      min-width: 280px;
+      max-width: 350px;
+      margin-block: 4%;
+      scroll-snap-align: center;
+
+      .recomended {
+        position: relative;
+        width: 160px;
+        padding-block: 12px;
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: $small;
+        color: $just-white;
+        background-color: $color-bitcoin;
+      }
+
+      .plan-info-container {
+        padding: 24px;
+        height: 48vh;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 12px;
+        background-color: $just-white;
+        box-shadow: 0 5px 20px -7px;
+
+        .plan-card--title {
+          font-weight: bold;
+          font-size: $small;
+          color: $color-warn;
+        }
+
+        .plan-card--price {
+          font-size: 8rem;
+          color: $color-warn;
+          sup {
+            position: relative;
+            right: -2rem;
+            font-size: $small;
+          }
+        }
+
+        .plan-card--price {
+          margin-block: 0;
+        }
+
+        .plan-card--ca {
+          border: 1px solid $color-bitcoin;
+          border-radius: 4px;
+          padding: 20px;
+          font-size: $small;
+          font-weight: 480;
+          background-color: $just-white;
+
+          img {
+            vertical-align: middle;
+            font-size: $small;
+          }
+
+          // &:hover,
+          // &:active {
+          //   color: $just-white;
+          //   background-color: $color-bitcoin;
+
+          //   img {
+          //     border-radius: 50%;
+          //     width: 20px;
+          //    background-color: $just-white;
+          //   }
+          // }
+        }
       }
     }
   }

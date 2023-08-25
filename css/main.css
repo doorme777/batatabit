@@ -9,13 +9,13 @@
 /* tamaño de fuentes */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   text-align: center;
   font-family: "DM Sans", sans-serif;
   background-color: #faf8f7;
-  scroll-behavior: smooth;
 }
 
 p {
@@ -61,6 +61,7 @@ p {
   border-radius: 8px;
   padding: 1.2rem 2rem;
   width: min(100%, 30rem);
+  text-decoration: none;
   font-size: small;
   font-weight: bold;
   color: #282523;
@@ -214,7 +215,7 @@ p {
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-block: 20px;
+  margin-block-start: 12px;
   width: 100vw;
   background-color: #201e1c;
 }
@@ -237,7 +238,7 @@ p {
   gap: 28px;
   width: 100%;
   margin: 0 4%;
-  padding-block-end: min(40px, 8vh);
+  padding-block-end: 4vh;
 }
 .main-datails-product .product-cards--container .main-datails--card {
   display: flex;
@@ -266,4 +267,125 @@ p {
 }
 .main-datails-product .product-cards--container .main-datails--card .product--card-body {
   line-height: 1.8rem;
+}
+
+.image-women-bitcoin {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 50vh;
+  width: 100vw;
+}
+.image-women-bitcoin h2 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #fff;
+}
+.image-women-bitcoin .image-women-bitcoin {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+.image-women-bitcoin .image-women-bitcoin .image-women {
+  width: min(280px, 100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-plans-container {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  overflow-x: hidden;
+}
+.main-plans-container h2 {
+  margin-block: 16px;
+  margin-inline: 4%;
+  font-size: 2.8rem;
+}
+.main-plans-container p {
+  margin-inline: 4%;
+}
+.main-plans-container .plans-container--slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 72%;
+  min-width: 280px;
+  max-width: 450px;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.main-plans-container .plans-container--slider .plans-container--card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 280px;
+  max-width: 350px;
+  margin-block: 4%;
+  scroll-snap-align: center;
+}
+.main-plans-container .plans-container--slider .plans-container--card .recomended {
+  position: relative;
+  width: 160px;
+  padding-block: 12px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #f7931a;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container {
+  padding: 24px;
+  height: 48vh;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px -7px;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #201e1c;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--price {
+  font-size: 8rem;
+  color: #201e1c;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--price sup {
+  position: relative;
+  right: -2rem;
+  font-size: 1.6rem;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--price {
+  margin-block: 0;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--ca {
+  border: 1px solid #f7931a;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 1.6rem;
+  font-weight: 480;
+  background-color: #fff;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--ca img {
+  vertical-align: middle;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=main.css.map */
