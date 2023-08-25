@@ -379,12 +379,13 @@ p {
 
       .recomended {
         position: relative;
+        bottom: -24px;
         width: 160px;
         padding-block: 12px;
         border-radius: 16px;
         font-weight: 700;
         font-size: $small;
-        color: $just-white;
+        color: $color-soft;
         background-color: $color-bitcoin;
       }
 
@@ -443,6 +444,56 @@ p {
           // }
         }
       }
+    }
+
+    .basic {
+      .recomended {
+        color: $color-warn;
+        border: 1px solid $color-bitcoin;
+        background-color: $just-white;
+      }
+    }
+
+    .plus {
+      .recomended {
+        background-color: #53a8f8;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      height: 5px;
+      background-color: $grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-bitcoin;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  @include flex(row, nowrap, space-evenly, center, center);
+  margin-top: 12vh;
+  width: 100vw;
+  height: 25vh;
+  background-color: $color-bitcoin;
+
+  .footer__contact {
+    li {
+      margin-block-end: 8px;
+      font-size: $small;
+      font-weight: italic;
+      text-align: left;
+      color: $just-white;
+      list-style: none;
+    }
+  }
+
+  .footer__logo {
+    img {
+      width: 9rem;
     }
   }
 }
