@@ -1,0 +1,18 @@
+.main-tabla-containedor {
+  width: 0;
+  overflow-x: inherit;
+}
+
+.product-cards--container {
+  width: 100%;
+  /* .main-datails--card:last-child {
+    position: relative;
+    left: calc(100% - 168px);
+  } */
+}
+
+.main-plans-container .plans-container--slider {
+  width: 100%;
+  justify-content: center;
+  overflow-x: hidden;
+}

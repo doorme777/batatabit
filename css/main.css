@@ -237,6 +237,7 @@ p {
   justify-items: center;
   gap: 28px;
   width: 100%;
+  max-width: 900px;
   margin: 0 4%;
   padding-block-end: 4vh;
 }
@@ -284,20 +285,12 @@ p {
   font-size: 2.8rem;
   color: #fff;
 }
-.image-women-bitcoin .image-women-bitcoin {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-}
-.image-women-bitcoin .image-women-bitcoin .image-women {
-  width: min(280px, 100%);
+.image-women-bitcoin .image-women {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.image-women-bitcoin .image-women img {
+  width: 100vw;
 }
 
 .main-plans-container {
@@ -321,10 +314,11 @@ p {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  width: 72%;
+  width: 100%;
   min-width: 280px;
-  max-width: 450px;
+  max-width: 900px;
   height: 100%;
+  padding-block-end: 12px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
@@ -338,7 +332,6 @@ p {
   width: 100%;
   min-width: 280px;
   max-width: 350px;
-  margin-block: 4%;
   scroll-snap-align: center;
 }
 .main-plans-container .plans-container--slider .plans-container--card .recomended {
@@ -355,6 +348,7 @@ p {
 .main-plans-container .plans-container--slider .plans-container--card .plan-info-container {
   padding: 24px;
   height: 48vh;
+  max-height: 320px;
   width: 80%;
   margin: 0 auto;
   border-radius: 12px;
