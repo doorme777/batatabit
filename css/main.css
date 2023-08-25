@@ -28,7 +28,6 @@ p {
   position: relative;
   display: grid;
   place-content: center;
-  top: 0;
   height: 50vh;
   min-width: 280px;
   background-image: linear-gradient(to left bottom, #282523, #5a3e27, #8c5828, #c17525, #f7931a);
@@ -51,7 +50,7 @@ p {
 .cabezera p {
   padding: 1.2rem 2.8rem;
   font-size: 1.6rem;
-  color: #ffe8d5;
+  color: #fdd8b9;
 }
 .cabezera .cabezera--planes {
   justify-self: center;
@@ -65,7 +64,7 @@ p {
   font-size: small;
   font-weight: bold;
   color: #282523;
-  background-color: #ffe8d5;
+  background-color: #fdd8b9;
   box-shadow: -1px 4px 10px -5px;
 }
 
@@ -172,7 +171,7 @@ p {
   width: min(100%, 26rem);
   border-radius: 12px;
   font-size: 1.2rem;
-  background-color: #ffe8d5;
+  background-color: #fdd8b9;
 }
 @keyframes aparecer {
   0% {
@@ -332,7 +331,7 @@ p {
   border-radius: 16px;
   font-weight: 700;
   font-size: 1.6rem;
-  color: #ffe8d5;
+  color: #fdd8b9;
   background-color: #f7931a;
 }
 .main-plans-container .plans-container--slider .plans-container--card .plan-info-container {
